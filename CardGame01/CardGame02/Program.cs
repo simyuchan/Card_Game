@@ -13,16 +13,16 @@ Console.WriteLine(" \t1열\t2열\t3열\t4열");
 
 for (int row = 0; row < 4; row++)
 {
-    Console.Write($"{row+1}행\t");
+    Console.Write($"{row + 1}행\t");
     for (int col = 0; col < 4; col++)
     {
-        if (star[row, col])
+        if (star[row, col] == true)
         {
-            Console.Write("**\t");
+            Console.Write($"[ {box[row, col]}]\t");
         }
         else
         {
-            //Console.Write($"[ {box[row, col]}]\t");
+            Console.Write("**\t");
         }
     }
     Console.WriteLine();
@@ -31,8 +31,16 @@ for (int row = 0; row < 4; row++)
 Console.WriteLine($"시도 횟수: {playCount}/20 | 찾은 쌍: {completCount}/8");
 Console.WriteLine();
 
-Console.Write("첫 번째 카드를 선택하세요 (행 열): ");
+Console.Write("첫 번째 카드를 선택하세요 (행): ");
 int inputNumber = int.Parse(Console.ReadLine());
+Console.Write("첫 번째 카드를 선택하세요 (열): ");
+int inputNumber2 = int.Parse(Console.ReadLine());
+Console.WriteLine();
+
+/*Console.Write("두 번째 카드를 선택하세요 (행): ");
+int inputNumber = int.Parse(Console.ReadLine());
+Console.Write("두 번째 카드를 선택하세요 (열): ");
+int inputNumber2 = int.Parse(Console.ReadLine());*/
 
 void Shuffle(int[,] box)
 {
