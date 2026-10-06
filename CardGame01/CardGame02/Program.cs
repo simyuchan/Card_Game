@@ -3,6 +3,7 @@
 int playCount = 0;
 int completCount = 0;
 int[,] box = new int[4, 4];
+bool[,] star = new bool[4, 4];
 
 Shuffle(box);
 
@@ -15,7 +16,14 @@ for (int row = 0; row < 4; row++)
     Console.Write($"{row+1}행\t");
     for (int col = 0; col < 4; col++)
     {
-        Console.Write($"[ {box[row, col]}]\t");
+        if (star[row, col])
+        {
+            Console.Write("**\t");
+        }
+        else
+        {
+            //Console.Write($"[ {box[row, col]}]\t");
+        }
     }
     Console.WriteLine();
 }
