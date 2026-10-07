@@ -7,7 +7,6 @@ bool[,] star = new bool[4, 4];
 
 Shuffle(box);
 
-
 while (playCount > 20 || 8 < completCount)
 {
     Console.Clear();
